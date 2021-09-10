@@ -1,5 +1,10 @@
+# [stronk7/docker-texlive-thin](http://hub.docker.com/r/stronk7/docker-texlive-thin/)
+
+[![Docker Pulls](http://img.shields.io/docker/pulls/stronk7/docker-texlive-thin.svg)](http://hub.docker.com/r/stronk7/docker-texlive-thin/)
+[![Docker Stars](http://img.shields.io/docker/stars/stronk7/docker-texlive-thin.svg)](http://hub.docker.com/r/stronk7/docker-texlive-thin/)
+
 ## About
-A simple docker image based on [thomasweise/docker-texlive-thin](https://hub.docker.com/r/thomasweise/docker-texlive-thin) and including [dvisvgm](https://dvisvgm.de).
+A simple docker image based on [thomasweise/docker-texlive-thin](https://hub.docker.com/r/thomasweise/docker-texlive-thin) but including [dvisvgm](https://dvisvgm.de).
 
 ## Usage
 
@@ -19,3 +24,5 @@ docker run -i --rm -v "${PWD}":/doc -w /doc stronk7/docker-texlive-thin [command
 ## License and copyright
 
 [BSD 3-Clause](https://choosealicense.com/licenses/bsd-3-clause/) - Copyright (c) 2021 onwards, Eloy Lafuente (stronk7).
+
+The license applies to the scripts in this repository, while the software components inside the images are under the respective licenses chosen by their respective copyright holders.

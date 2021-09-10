@@ -30,3 +30,5 @@ Note that this has been created mainly for ease of testing, it's not a solution 
 ## License and copyright
 
 [BSD 3-Clause](https://choosealicense.com/licenses/bsd-3-clause/) - Copyright (c) 2021 onwards, Eloy Lafuente (stronk7).
+
+The license applies to the scripts in this repository, while the software components inside the images are under the respective licenses chosen by their respective copyright holders
