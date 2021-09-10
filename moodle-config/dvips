@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+LATEXTMP="${LATEXTMP:-/tmp}"
+dvifile=${2#${LATEXTMP}/}
+psfile=${4#${LATEXTMP}/}
+/usr/local/bin/docker run -i --rm -v ${LATEXTMP}:/doc -w /doc stronk7/docker-texlive-thin \
+    /usr/bin/dvips -E ${dvifile} -o ${psfile}

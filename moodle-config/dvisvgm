@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+LATEXTMP="${LATEXTMP:-/tmp}"
+# We aren't going to use any ps here, straight conversion from dvi to png/gif
+# (it's a little bit ridiculous that the tex filter always converts to ps first)
+dvifile=${2#${LATEXTMP}/}
+dvifile=${dvifile%.*}.dvi
+outfile=${4#${LATEXTMP}/}
+echo /usr/local/bin/docker run -i --rm -v ${LATEXTMP}:/doc -w /doc stronk7/docker-texlive-thin \
+    /usr/bin/dvisvgm -E ${dvifile} -o ${outfile}
+/usr/local/bin/docker run -i --rm -v ${LATEXTMP}:/doc -w /doc stronk7/docker-texlive-thin \
+    /usr/bin/dvisvgm ${dvifile} -o ${outfile}
