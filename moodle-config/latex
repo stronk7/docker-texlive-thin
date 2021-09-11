@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 LATEXTMP="${LATEXTMP:-/tmp}"
-    /usr/bin/latex "$@"
 /usr/local/bin/docker run -i --rm -v ${LATEXTMP}:/doc -w /doc stronk7/docker-texlive-thin \
-    /usr/bin/latex "$@" || exit $?
+    /usr/bin/latex "$@"
