@@ -22,4 +22,5 @@ $CFG->forced_plugin_settings['filter_tex']['pathdvisvgm']   = dirname(__FILE__) 
 // (note that if the site is using custom $CFG->tempdir this won't work, but that's not the default).
 $latextmp = "$CFG->dataroot/temp/latex";
 @mkdir($latextmp, $CFG->directorypermissions ?? 00777);
+@chmod($latextmp, $CFG->directorypermissions ?? 00777);
 putenv("LATEXTMP=$latextmp");
